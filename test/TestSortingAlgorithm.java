@@ -15,12 +15,10 @@ public class TestSortingAlgorithm {
 			collection[i] = (int) (Math.random() * 100);
 		}
 		System.out.println("\nData set Before Sorting : \t" + Arrays.toString(collection));
-		Arrays.sort(collection);
 	}
 
 	@Test
 	public void shouldReturnSortedCollectionFromBubbleSortAlgorithm() {
-		System.out.println("\nData set Before Sorting : \t" + Arrays.toString(collection));
 		int[] actualSortedCollection = SortingAlgorithm.sortInBubbleSort(collection);
 		System.out.println("Data set After Bubble Sorting : \t" + Arrays.toString(actualSortedCollection));
 		assertEquals(actualSortedCollection[2], collection[2]);
