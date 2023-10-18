@@ -17,7 +17,7 @@ public class TestSortingAlgorithm {
 		}
 
         sortedCollection = Arrays.copyOf(collection, collection.length);
-        Array.sort(sortedCollection);
+        Arrays.sort(sortedCollection);
 	}
 
 	@Test
