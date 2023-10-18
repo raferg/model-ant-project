@@ -5,7 +5,7 @@ import java.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestSortingAlgorithms {
+public class TestSortingAlgorithm {
 
 	private int[] collection = new int[10];
 
