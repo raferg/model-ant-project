@@ -28,21 +28,19 @@
 
   <target name="test" depends="compile,test-compile">
     <mkdir dir="build/test-reports"/>
-    <jacoco:coverage enabled="${jacoco}" destfile="build/jacoco.exec">
-      <junit printsummary="yes" haltonfailure="yes" fork="true" forkmode="once">
-        <classpath>
-          <fileset dir="lib" includes="*.jar" />
-          <pathelement path="build/classes" />
-          <pathelement path="build/test-classes" />
-        </classpath>
-        <formatter type="xml"/>
-        <formatter type="plain"/>
-        <batchtest fork="yes" todir="build/test-reports">
-          <fileset dir="test">
-            <include name="**/*Test*.java"/>
-          </fileset>
-        </batchtest>
-      </junit>
-    </jacoco:coverage>
+    <junit printsummary="yes" haltonfailure="yes" fork="true" forkmode="once">
+      <classpath>
+        <fileset dir="lib" includes="*.jar" />
+        <pathelement path="build/classes" />
+        <pathelement path="build/test-classes" />
+      </classpath>
+      <formatter type="xml"/>
+      <formatter type="plain"/>
+      <batchtest fork="yes" todir="build/test-reports">
+        <fileset dir="test">
+          <include name="**/*Test*.java"/>
+        </fileset>
+      </batchtest>
+    </junit>
   </target>
 </project>
