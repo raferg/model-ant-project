@@ -21,7 +21,16 @@ public class TestSortingAlgorithm {
 	public void shouldReturnSortedCollectionFromBubbleSortAlgorithm() {
 		int[] actualSortedCollection = SortingAlgorithm.sortInBubbleSort(collection);
 		System.out.println("Data set After Bubble Sorting : \t" + Arrays.toString(actualSortedCollection));
-		assertEquals(actualSortedCollection[2], collection[2]);
+		assertEquals(Arrays.toString(actualSortedCollection), Arrays.toString(collection));
+	}
+
+	@Test
+	public void shouldFail() {
+        int[] theOG = Arrays.copyOf(collection, collection.length);
+
+		int[] actualSortedCollection = SortingAlgorithm.sortInBubbleSort(collection);
+		System.out.println("Data set After Bubble Sorting : \t" + Arrays.toString(actualSortedCollection));
+		assertEquals(Arrays.toString(theOG), Arrays.toString(actualSortedCollection));
 	}
 
 }
