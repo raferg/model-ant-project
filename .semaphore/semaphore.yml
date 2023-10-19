@@ -11,7 +11,7 @@ blocks:
         - name: Build & Test
           commands:
             - checkout
-            - sem-version java 1.8
+            - sem-version java 11
             - sudo apt-get install -y ant
             - ant -noinput -buildfile build.xml
             - ant test
