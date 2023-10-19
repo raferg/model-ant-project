@@ -15,9 +15,7 @@ blocks:
             - sudo apt-get install -y ant
             - ant -noinput -buildfile build.xml
             - ant test
-  - name: 'Block #2'
-    task:
-      jobs:
-        - name: 'Job #1'
+      epilogue:
+        always:
           commands:
             - test-results public **/build/test-reports/**.xml
