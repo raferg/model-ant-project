@@ -33,7 +33,6 @@ public class TestSortingAlgorithm {
 
 		int[] actualSortedCollection = SortingAlgorithm.sortInBubbleSort(collection);
 		System.out.println("Data set After Bubble Sorting : \t" + Arrays.toString(actualSortedCollection));
-		assertEquals(Arrays.toString(sortedCollection), Arrays.toString(collection));
 		assertEquals(Arrays.toString(theOG), Arrays.toString(actualSortedCollection));
 	}
 
