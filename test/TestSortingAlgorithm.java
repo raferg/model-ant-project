@@ -27,7 +27,6 @@ public class TestSortingAlgorithm {
 		assertEquals(Arrays.toString(sortedCollection), Arrays.toString(collection));
 	}
 
-	@Test
 	public void shouldFail() {
         int[] theOG = Arrays.copyOf(collection, collection.length);
 
@@ -35,6 +34,15 @@ public class TestSortingAlgorithm {
 		System.out.println("Data set After Bubble Sorting : \t" + Arrays.toString(actualSortedCollection));
 		assertEquals(Arrays.toString(sortedCollection), Arrays.toString(collection));
 		//assertEquals(Arrays.toString(theOG), Arrays.toString(actualSortedCollection));
+	}
+
+	@Test
+	public void shouldPass() {
+        int[] theOG = Arrays.copyOf(collection, collection.length);
+
+		int[] actualSortedCollection = SortingAlgorithm.sortInBubbleSort(collection);
+		System.out.println("Data set After Bubble Sorting : \t" + Arrays.toString(actualSortedCollection));
+		assertEquals(Arrays.toString(sortedCollection), Arrays.toString(collection));
 	}
 
 }
